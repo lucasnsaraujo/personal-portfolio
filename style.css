@@ -44,7 +44,8 @@ header div a:hover {
 }
 
 #wrapper h1,
-h2, p {
+h2,
+p {
   font-weight: 700;
   color: white;
   margin: 0;
@@ -55,22 +56,102 @@ h2, p {
 }
 
 #wrapper p {
-    width: 500px;
-    font-weight: 300;
-    margin: 0 auto;
-    margin-top: 22px;
+  width: 500px;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-top: 22px;
 }
 #social {
-    text-align: center;
-    margin-top: 80px;
+  text-align: center;
+  margin-top: 80px;
 }
 #social a {
-    margin: 0 28px;
-    border-bottom: 2px solid #50fa7b;
-    text-decoration: none;
-    color: white;
+  margin: 0 28px;
+  border-bottom: 2px solid #50fa7b;
+  text-decoration: none;
+  color: white;
 }
 #social a:hover {
-    color: #50fa7b;
-    transition: 200ms;
+  color: #50fa7b;
+  transition: 200ms;
+}
+
+/* --------- Cards ---------- */
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.card {
+  background-color: #50fa7b;
+  cursor: pointer;
+}
+.card:hover {
+  outline: 5px solid white;
+  transition: 0.1s;
+}
+.card-image-container img {
+  width: 100%;
+}
+.card-content,
+.card-info {
+  padding: 24px;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-content p, .card-info p {
+  color: #282a36;
+}
+
+#title {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* --------- Modal 0verlay ---------- */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  margin: 5vh auto;
+  position: relative;
+}
+.close-modal {
+  position: absolute;
+  color: black;
+  cursor: pointer;
+  top: 8px;
+  right: 8px;
+}
+
+/* --------- Modal 0verlay Ativo ---------- */
+
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 100;
+}
+
+/* --------- Modal Content ---------- */
+.modal-content iframe{
+position: absolute;
+width: 100%;
+height: 90%;
+top: 5%;
 }
